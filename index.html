@@ -9,13 +9,13 @@
   :root {
     --bg: #F7F5F0;
     --surface: #FFFFFF;
-    --ink: #1A1917;
-    --ink-muted: #6B6860;
-    --ink-faint: #ADAAA3;
+    --ink: #111110;
+    --ink-muted: #3D3C39;
+    --ink-faint: #7A7870;
     --accent: #2A6B4F;
     --accent-light: #E1F0E8;
     --accent-mid: #4A9B73;
-    --rule: #E2DED6;
+    --rule: #D8D4CC;
     --mono: 'DM Mono', monospace;
     --sans: 'DM Sans', sans-serif;
   }
@@ -25,8 +25,8 @@
     font-family: var(--sans);
     background: var(--bg);
     color: var(--ink);
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 17px;
+    line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -157,7 +157,7 @@
     align-items: start;
   }
   @media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; } }
-  .about-body { font-size: 1rem; color: var(--ink-muted); line-height: 1.8; }
+  .about-body { font-size: 1.05rem; color: var(--ink-muted); line-height: 1.85; }
   .about-body p + p { margin-top: 1rem; }
   .about-highlight {
     background: var(--accent-light);
@@ -243,8 +243,8 @@
   }
   .exp-bullets { padding-left: 1rem; }
   .exp-bullets li {
-    font-size: 14px; color: var(--ink-muted);
-    line-height: 1.65; margin-bottom: 0.35rem;
+    font-size: 15px; color: var(--ink-muted);
+    line-height: 1.7; margin-bottom: 0.35rem;
   }
   .exp-bullets li::marker { color: var(--accent-mid); }
   .exp-badge {
@@ -291,7 +291,12 @@
   <h1>Hi, I'm <em>Nerro</em>.<br>I make remote<br>work run smoothly.</h1>
   <p class="hero-sub">10+ years keeping operations organized, clients happy, and quality consistently high — across BPO, customer support, and executive support roles.</p>
   <a href="#experience" class="hero-cta">See my work</a>
-  <a href="mailto:njavellana999@gmail.com" class="hero-cta-ghost">Get in touch</a>
+  <a href="#" class="hero-cta-ghost" onclick="document.getElementById('contact-options').style.display='flex'; this.style.display='none'; return false;">Get in touch</a>
+  <div id="contact-options" style="display:none; flex-wrap:wrap; gap:0.75rem; margin-top:1rem; align-items:center;">
+    <span style="font-size:13px; color:var(--ink-muted);">Reach me via:</span>
+    <a href="mailto:njavellana999@gmail.com" style="display:inline-flex;align-items:center;gap:0.4rem;background:var(--surface);border:1px solid var(--rule);padding:0.5rem 1rem;border-radius:4px;font-size:13px;color:var(--ink);text-decoration:none;">✉ Email</a>
+    <a href="https://wa.me/639761640965" target="_blank" style="display:inline-flex;align-items:center;gap:0.4rem;background:#25D366;padding:0.5rem 1rem;border-radius:4px;font-size:13px;color:#fff;text-decoration:none;">WhatsApp</a>
+  </div>
 
   <div class="stats">
     <div class="stat">
